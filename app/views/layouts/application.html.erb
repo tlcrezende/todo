@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='pt'>
+<html>
   <head>
     <title>Gerenciador de Tarefas</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <% flash.each do |type, message| %>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <%= message %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
